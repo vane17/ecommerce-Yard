@@ -11,11 +11,12 @@
 	grid-template-rows: auto 1fr auto;
 	width: 300px;
 }
-.logo {
+.logothere {
+	display:none;
 	width: 150px;
 	margin-bottom: 48px;
 	justify-self: center;
-	display: none;
+	
 }
 .form {
 	display: flex;
@@ -72,7 +73,7 @@
 	margin-bottom: 30px;
 }
 @media (max-width: 640px) {
-	.logo {
+	.logothere {
 		display: block;
 	}
 }

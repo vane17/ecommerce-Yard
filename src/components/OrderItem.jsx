@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/OrderItem.scss';
+import icon from '../../public/assets/icons/icon_close.png';
 
 const OrderItem = () => {
+	
+
 	return (
 		<div className="OrderItem">
 			<figure>
@@ -9,7 +12,12 @@ const OrderItem = () => {
 			</figure>
 			<p>Bike</p>
 			<p>$30,00</p>
-			<img src="./icons/icon_close.png" alt="close" />
+			<figure onClick={handleClick}>
+  				<img src={icon} alt="close" />
+			</figure>
+			
+  
+
 		</div>
 	);
 }
