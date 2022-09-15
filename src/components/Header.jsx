@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react'
 import {Menu} from './Menu';
+import {MenuMobile} from './MenuMobile';
 import {AppContext} from '../context/AppContext';
 import {MyOrder} from '../containers/MyOrder';
 import icon from '../../public/assets/icons/icon_menu.svg';
@@ -13,6 +14,7 @@ const Header = () => {
     const { state } = useContext(AppContext);
     const [toggleOrders, setToggleOrders] = useState(false);
     const [toggle, setToggle] = useState(false);
+    const [mobile, setMenuMobile] = useState(false);
     
     const handleToogle = () => {
         setToggle(!toggle) //cambia el valor que tiene
@@ -20,27 +22,28 @@ const Header = () => {
 
     return (
         <nav>
-            <img src={icon} alt="menu" className="menu" />
+            <img src={icon} alt="menu" className="menu" onClick = {()=>setMenuMobile(!mobile)}/>
+    
             <div className="navbar-left">
                 <img src={logo} alt="logo" className="logoheader" />
                 <ul>
                     <li>
-                        <a href="/">All</a>
+                        <a href="#">All</a>
                     </li>
                     <li>
-                        <a href="/">Clothes</a>
+                        <a href="#">Clothes</a>
                     </li>
                     <li>
-                        <a href="/">Electronics</a>
+                        <a href="#">Electronics</a>
                     </li>
                     <li>
-                        <a href="/">Furnitures</a>
+                        <a href="#">Furnitures</a>
                     </li>
                     <li>
-                        <a href="/">Toys</a>
+                        <a href="#">Toys</a>
                     </li>
                     <li>
-                        <a href="/">Others</a>
+                        <a href="#">Others</a>
                     </li>
                 </ul>
             </div>
@@ -53,9 +56,9 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
-            {toggle && <Menu/>}
-            {toggleOrders && <MyOrder/>}
-            
+            {toggle  && <Menu toggleOrders={toggleOrders}/>}
+            {toggleOrders && <MyOrder toggleOrders={toggleOrders} setToggleOrders={setToggleOrders} />}
+            {mobile  && <MenuMobile mobile={mobile} setMenuMobile={setMenuMobile}/>}
         </nav>
 
     )

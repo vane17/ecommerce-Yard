@@ -1,9 +1,16 @@
 nav {
   display: flex;
   justify-content: space-between;
+  
   padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
+  position: sticky; // queda mejor que con fixed
+  top: 0;
+  background-color: #fff;
+  width: calc(100% - 48px);
+ 
 }
+
 .menu {
   display: none;
 }
@@ -42,9 +49,11 @@ nav {
   color: var(--very-light-pink);
   font-size: var(--sm);
   margin-right: 12px;
+  cursor: pointer;
 }
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 .navbar-shopping-cart div {
   width: 16px;

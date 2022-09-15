@@ -9,7 +9,18 @@
 	position: absolute;
 	top: 60px;
 	right: 50px;
+	background-color: #fff;
 
+}
+
+#Menu-orders{
+	right: 0px;
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
+}
+
+@keyframes swipeLeft {
+	100% {transform: translateX(240px);}
 }
 .Menu ul {
 	list-style: none;

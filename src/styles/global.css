@@ -1,4 +1,8 @@
 body {
+    caret-color: none;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+}
+body:focus { /*Sirve para quitar la linea de los textos caret*/
+    outline: none;
 }

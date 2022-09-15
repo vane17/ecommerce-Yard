@@ -10,12 +10,19 @@
 .OrderItem figure {
 	margin: 0;
 }
-.OrderItem figure img {
+.OrderItem .OrderItem-img img{
 	width: 70px;
 	height: 70px;
 	border-radius: 20px;
 	object-fit: cover;
 }
+
+.OrderItem .iconClose {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
 .OrderItem p:nth-child(2) {
 	color: var(--very-light-pink);
 }

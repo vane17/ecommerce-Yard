@@ -13,13 +13,14 @@ const OrderItem = (props) => {
 
 	return (
 		<div className="OrderItem">
-			<figure>
-				<img src={product.images[0]} alt={product.title} />
+			<figure className="OrderItem-img">
+				{<img src={product.images[0]} alt={product.title} />}
+
 			</figure>
 			<p>{product.title}</p>
 			<p>${product.price}</p>
 			<figure>
-  				<img src={icon} alt="close" onClick= {()=> handleRemove(indexValue)}/>
+  				<img src={icon} className="iconClose" alt="close" onClick= {()=> handleRemove(indexValue)}/>
 			</figure>
 			
   
